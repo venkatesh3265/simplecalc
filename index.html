@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    //displaying number
+    function insertnum(num){
+     document.myform.inputbox.value = document.myform.inputbox.value+num;
+
+
+    }
+    //opertion required for operant
+    function finalvalue(){
+        var expression = document.myform.inputbox.value;
+       document.myform.inputbox.value= eval(expression);
+
+
+
+    }
+ //clearing screen
+    function clearscreen(){
+
+  document.myform.inputbox.value = "";
+
+
+    }
+
+  </script>
+</head>
+<body>
+    <form name="myform">
+      <input type="text" name="inputbox" id="inputtext" placeholder="0">
+
+    </form>
+    <table>
+     <tr>
+     <td> <input type="button" id="button1" value="9" onclick="insertnum(9)"> </td>
+     <td> <input type="button" id="button1" value="8" onclick="insertnum(8)"> </td>
+     <td> <input type="button" id="button1" value="7" onclick="insertnum(7)"> </td>
+     <td> <input type="button" id="button2" value="+" onclick="insertnum('+')"> </td>
+     </tr>
+     <tr>
+        <td> <input type="button" id="button1" value="6" onclick="insertnum(6)"> </td>
+        <td> <input type="button" id="button1" value="5" onclick="insertnum(5)"> </td>
+        <td> <input type="button" id="button1" value="4" onclick="insertnum(4)"> </td>
+        <td> <input type="button" id="button2" value="-" onclick="insertnum('-')"> </td>
+     </tr>
+     <tr>
+        <td> <input type="button" id="button1" value="3" onclick="insertnum(3)"> </td>
+        <td> <input type="button" id="button1" value="2" onclick="insertnum(2)"> </td>
+        <td> <input type="button" id="button1" value="1" onclick="insertnum(1)"> </td>
+        <td> <input type="button" id="button2" value="x" onclick="insertnum('*')"> </td>
+    </tr>
+    <tr>
+        <td> <input type="button" id="button3" value="=" onclick="finalvalue()"> </td>
+        <td> <input type="button" id="button3" value="c" onclick="clearscreen()"> </td>
+        <td> <input type="button" id="button1" value="0" onclick="insertnum(0)"> </td>
+        <td> <input type="button" id="button2" value="÷" onclick="insertnum('÷')"> </td>
+        </tr>
+
+    </table>
+    
+</body>
+</html>
